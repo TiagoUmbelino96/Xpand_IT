@@ -1,0 +1,8 @@
+<Connector port="4041" protocol="org.apache.coyote.http11.Http11NioProtocol"
+            maxThreads="150" SSLEnabled="true">
+    <SSLHostConfig>
+        <Certificate certificateFile="conf/server.crt"
+                     certificateKeyFile="conf/server.key"
+                     type="RSA" />
+    </SSLHostConfig>
+</Connector>

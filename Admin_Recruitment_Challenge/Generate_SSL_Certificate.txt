@@ -1,0 +1,40 @@
+
+tiago@DESKTOP-800UJRU MINGW64 ~
+$ cd Desktop/Xpand_IT/Admin_Recruitment_Challenge
+
+tiago@DESKTOP-800UJRU MINGW64 ~/Desktop/Xpand_IT/Admin_Recruitment_Challenge (main)
+$ openssl req -newkey rsa:2048 -nodes -keyout ssl-private.key -out ssl.crt
+..+++++++++++++++++++++++++++++++++++++++*.+.......+...+++++++++++++++++++++++++++++++++++++++*..+.............+...+...+..+...+....+.....+.+......+...+..+.........................+......+..+.+.....+.........+.+.....+......+......+...+.......+............+.....+..........+.....+.......+......+..............+.........+.+........+......+.+......+..+...+...............+...+....+...+...+......+..............+....+......+..+....+........+.++++++
+....+.....+.+.....+.........+.+....................+.+...+.................+.+.....+...+.......+...+..+++++++++++++++++++++++++++++++++++++++*..+...+.....+...+............+++++++++++++++++++++++++++++++++++++++*..+.....+..........+...+...........+...+......+.+.........+..+.........+....+......+.....+......+..........+.....+...+......+......+............+..........+........+...............+...+.+......+..+......+......+.+..+.......+...+.....+......+.+......+...+...............+...............+..............+.......+...+.....................+..+...++++++
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:PT
+State or Province Name (full name) [Some-State]:Coruche
+Locality Name (eg, city) []:Branca
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:TiagoUmbelino
+Organizational Unit Name (eg, section) []:IT
+Common Name (e.g. server FQDN or YOUR name) []:TU
+Email Address []:tiagoumblino96@gmail.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
+An optional company name []:
+
+tiago@DESKTOP-800UJRU MINGW64 ~/Desktop/Xpand_IT/Admin_Recruitment_Challenge (main)
+$ openssl x509 -req -in ssl.crt -signkey ssl-private.key -out CA-public-certificate.pem
+Certificate request self-signature ok
+subject=C=PT, ST=Coruche, L=Branca, O=TiagoUmbelino, OU=IT, CN=TU, emailAddress=tiagoumblino96@gmail.com
+
+tiago@DESKTOP-800UJRU MINGW64 ~/Desktop/Xpand_IT/Admin_Recruitment_Challenge (main)
+$ openssl rsa -in ssl-private.key -outform PEM -out CA-private-key.pem
+writing RSA key
+
+tiago@DESKTOP-800UJRU MINGW64 ~/Desktop/Xpand_IT/Admin_Recruitment_Challenge (main)
+$
